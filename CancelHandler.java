@@ -5,17 +5,17 @@ import javax.swing.*;
 
 class CancelHandler implements ActionListener{
 	private JTextField fieldName, fieldAge;
-	private JComboBox<Integer> combo;
+	private JComboBox<Integer> yearsCombo;
 	
-	public CancelHandler(JTextField fieldAge, JTextField fieldName, JComboBox<Integer> combo){
+	public CancelHandler(JTextField fieldAge, JTextField fieldName, JComboBox<Integer> yearsCombo){
 		this.fieldAge=fieldAge;
 		this.fieldName=fieldName;
-		this.combo=combo;
+		this.yearsCombo=yearsCombo;
 	}
 	
 	public void actionPerformed(ActionEvent e) {
 		this.fieldName.setText(null);
 		this.fieldAge.setText(null);
-		this.combo.setSelectedIndex(0);
+		this.yearsCombo.setSelectedIndex(0);
 	}
 }

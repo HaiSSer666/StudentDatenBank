@@ -4,11 +4,11 @@ import java.awt.event.*;
 import java.util.ArrayList;
 import javax.swing.*;
 
-class ShowAll implements ActionListener{
+class ShowAllButtonHandler implements ActionListener{
 	public static String s = " ";
 	ArrayList<Student> list;
 	
-	public ShowAll(ArrayList<Student> list){
+	public ShowAllButtonHandler(ArrayList<Student> list){
 		this.list=list;
 	}
 	

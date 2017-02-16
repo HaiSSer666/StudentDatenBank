@@ -6,10 +6,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.*;
 
-class Save implements ActionListener{
+class SaveButtonHandler implements ActionListener{
 	ArrayList<Student> list;
 
-	public Save(ArrayList<Student> list){
+	public SaveButtonHandler(ArrayList<Student> list){
 		this.list=list;
 	}
 	
@@ -25,7 +25,7 @@ class Save implements ActionListener{
 			else{
 				try(FileWriter writer = new FileWriter("D:\\ListOfStudents.txt", false))
 		        {
-		            writer.write(ShowAll.s);   
+		            writer.write(ShowAllButtonHandler.s);   
 		            writer.flush();
 		        }
 		        catch(IOException ex){

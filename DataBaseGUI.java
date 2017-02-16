@@ -11,10 +11,10 @@ public class DataBaseGUI extends JFrame{
 	private static final long serialVersionUID = 1L;
 	public static String s = "";
 	ArrayList<Student> list = new ArrayList<>();
-	private JButton ok, cancel, showAll, clearHistory, save, saveAll; 	
+	private JButton okButton, cancelButton, showAllButton, clearHistoryButton, saveButton, saveAllButton; 	
 	private JTextField fieldName, fieldAge;
 	private JLabel labelName, labelAge, labelCombo;
-	private JComboBox<Integer> combo;
+	private JComboBox<Integer> yearCombo;
 	public final static Integer[] yearsDataSource = {1, 2, 3, 4, 5};
 	
 	public DataBaseGUI (){
@@ -23,12 +23,12 @@ public class DataBaseGUI extends JFrame{
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	setResizable(false);
 	
-	ok = new JButton("OK");
-	cancel = new JButton("Cancle");
-	showAll = new JButton("Show history");
-	clearHistory = new JButton("Clear history");
-	save = new JButton("SAVE");
-	saveAll = new JButton("Save all");
+	okButton = new JButton("OK");
+	cancelButton = new JButton("Cancle");
+	showAllButton = new JButton("Show history");
+	clearHistoryButton = new JButton("Clear history");
+	saveButton = new JButton("SAVE");
+	saveAllButton = new JButton("Save all");
 	
 	fieldName = new JTextField();
 	fieldAge = new JTextField();
@@ -37,7 +37,7 @@ public class DataBaseGUI extends JFrame{
 	labelAge = new JLabel("Enter age: ");
 	labelCombo = new JLabel("Year of studing: ");
 	
-	combo = new JComboBox<Integer>(yearsDataSource);
+	yearCombo = new JComboBox<Integer>(yearsDataSource);
 	//combo.setEnabled(false);
 	
 	setLayout(new GridLayout(3, 2));
@@ -47,19 +47,19 @@ public class DataBaseGUI extends JFrame{
 	add(labelAge);
 	add(fieldAge);
 	add(labelCombo);
-	add(combo);
-	add(cancel);
-	add(ok);
-	add(clearHistory);
-	add(showAll);
-	add(save);
-	add(saveAll);
+	add(yearCombo);
+	add(cancelButton);
+	add(okButton);
+	add(clearHistoryButton);
+	add(showAllButton);
+	add(saveButton);
+	add(saveAllButton);
 	
-	ok.addActionListener(new Ok(fieldAge, fieldName, combo, list));
-	cancel.addActionListener(new CancelHandler(fieldAge, fieldName, combo));
-	showAll.addActionListener(new ShowAll(list));
-	clearHistory.addActionListener(new ClearHistoryHandler(list));
-	save.addActionListener(new Save(list));
-	saveAll.addActionListener(new SaveAll(list));
+	okButton.addActionListener(new OkButtonHandler(fieldAge, fieldName, yearCombo, list));
+	cancelButton.addActionListener(new CancelHandler(fieldAge, fieldName, yearCombo));
+	showAllButton.addActionListener(new ShowAllButtonHandler(list));
+	clearHistoryButton.addActionListener(new ClearHistoryHandler(list));
+	saveButton.addActionListener(new SaveButtonHandler(list));
+	saveAllButton.addActionListener(new SaveAllButtonHandler(list));
 	}	
 }
