@@ -1,14 +1,14 @@
-package main;
+package Main;
 
 import java.awt.event.*;
 import java.util.ArrayList;
 import javax.swing.*;
 
-class SHOWALL implements ActionListener{
+class ShowAllButtonHandler implements ActionListener{
 	public static String s = " ";
 	ArrayList<Student> list;
 	
-	public SHOWALL(ArrayList<Student> list){
+	public ShowAllButtonHandler(ArrayList<Student> list){
 		this.list=list;
 	}
 	

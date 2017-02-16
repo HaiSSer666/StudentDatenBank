@@ -1,4 +1,4 @@
-package main;
+package Main;
 
 import java.awt.event.*;
 import java.io.FileWriter;
@@ -6,10 +6,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.*;
 
-class SAVE implements ActionListener{
+class SaveButtonHandler implements ActionListener{
 	ArrayList<Student> list;
 
-	public SAVE(ArrayList<Student> list){
+	public SaveButtonHandler(ArrayList<Student> list){
 		this.list=list;
 	}
 	
@@ -25,7 +25,7 @@ class SAVE implements ActionListener{
 			else{
 				try(FileWriter writer = new FileWriter("D:\\ListOfStudents.txt", false))
 		        {
-		            writer.write(SHOWALL.s);   
+		            writer.write(ShowAllButtonHandler.s);   
 		            writer.flush();
 		        }
 		        catch(IOException ex){

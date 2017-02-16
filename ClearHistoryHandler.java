@@ -1,14 +1,14 @@
-package main;
+package Main;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-class CLEARHISTORY implements ActionListener{
+class ClearHistoryHandler implements ActionListener{
 	ArrayList<Student> list;
 
-	public CLEARHISTORY(ArrayList<Student> list){
+	public ClearHistoryHandler(ArrayList<Student> list){
 		this.list=list;
 	}
 	
