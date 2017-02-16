@@ -1,14 +1,14 @@
-package main;
+package Main;
 
 import java.awt.event.*;
 import java.util.ArrayList;
 import javax.swing.*;
 
-class SHOWALL implements ActionListener{
+class ShowAll implements ActionListener{
 	public static String s = " ";
 	ArrayList<Student> list;
 	
-	public SHOWALL(ArrayList<Student> list){
+	public ShowAll(ArrayList<Student> list){
 		this.list=list;
 	}
 	
